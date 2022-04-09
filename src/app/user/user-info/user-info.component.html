@@ -1,0 +1,43 @@
+<ul class="list-group">
+    <h3 style="margin-left: 25px;">Infromation about: {{user?.name}}</h3>
+    <li class="list-group-item border "> ID: {{user?.id}}</li>
+    <li class="list-group-item border"> Name: {{user?.name}}</li>
+    <li class="list-group-item border"> Username: {{user?.username}}</li>
+    <li class="list-group-item border">
+        <img src="/assets/icons/email.png" alt="email.png" class="icon">
+         Email: {{user?.email}}
+    </li>
+    <li class="list-group-item border">
+        <h4>
+            <img src="/assets/icons/adress.png" alt="adress.png" class="icon">
+            Adress
+        </h4>
+        <p> Street: {{user?.address?.street}}</p>
+        <p> Suite: {{user?.address?.suite}}</p>
+        <p> City: {{user?.address?.city}}</p>
+        <p> Zipcode: {{user?.address?.zipcode}}</p>
+        <h5>Geo</h5>
+        <p> Lat: {{user?.address?.geo?.lat}}</p>
+        <p> Lng: {{user?.address?.geo?.lng}}</p>
+    </li>
+    <li class="list-group-item border">
+        <img src="/assets/icons/phone.png" alt="phone.png" class="icon">
+        Phone: {{user?.phone}}
+        </li>
+    <li class="list-group-item border">
+        <img src="/assets/icons/website.png" alt="website.png" class="icon">
+        Website: {{user?.website}}</li>
+    <li class="list-group-item border"> 
+        <h4>Company</h4>
+        <p> Name: {{user?.company?.name}}</p>
+        <p> CatchPhrase: {{user?.company?.catchPhrase}}</p>
+        <p> Bs: {{user?.company?.bs}}</p>
+    </li>
+    <button 
+        class="btn btn-dark" 
+        style="margin: 5px 25px; width: 150px; border-radius: 20px;"
+        [routerLink]="['/user-info', user?.id, 'posts']">
+        User posts
+    </button>
+</ul>
+

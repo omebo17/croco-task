@@ -1,0 +1,11 @@
+<h3 style="margin-left: 25px;">Posts of user with ID: {{ posts[0]?.userId }}</h3>
+<div *ngFor="let post of posts" class="card border" >
+  <div class="card-body">
+    <div class="inRow">
+      <h5 class="card-title">Post title: {{post.title}}</h5>
+      <img src="/assets/icons/post.png" alt="post.png" style="width: 20px; height: 20px;">
+    </div>
+    <h6 class="card-subtitle mb-2 text-muted">Post ID: {{post.id}}</h6>
+    <p class="card-text">{{post.body}}</p> 
+  </div>
+</div>

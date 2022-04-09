@@ -1,0 +1,8 @@
+<div class="btn-group" role="group" >
+    <button
+        [routerLink]="['user-info',elem.id]"
+        class="btn btn-dark" 
+        *ngFor="let elem of data">
+        {{elem.name}}
+    </button>
+</div>
